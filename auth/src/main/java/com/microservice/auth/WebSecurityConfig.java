@@ -1,4 +1,4 @@
-package com.microservice.basic;
+package com.microservice.auth;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
