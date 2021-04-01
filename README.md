@@ -1,12 +1,12 @@
 # Microservices
 
-## Basic microservice
+## Locations microservice
 
 Contains the basics of a microservice, a rest controller, a connection with a file based database, entities, repositories and a connection with other microservice throw a feing client.
 
-## Hidden microservice
+## Book microservice
 
-This microservice only will be accessible from local network and not from outside, similar to the basic but only accessible for other microservices, just for testing purposes of the feing client.
+Another microservice for test the controllers and feing clients
 
 ## Auth microservice
 
