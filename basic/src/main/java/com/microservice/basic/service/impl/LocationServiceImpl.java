@@ -29,6 +29,7 @@ public class LocationServiceImpl implements LocationService{
 
 	@Override
 	public LocationBean save(LocationBean bean) {
+		bean.setId(null);
 		Location saved = locationRepository.save(mapper.convertValue(bean, Location.class));
 		return mapper.convertValue(saved, LocationBean.class);
 	}

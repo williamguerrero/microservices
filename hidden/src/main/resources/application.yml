@@ -1,0 +1,38 @@
+server:
+    port: 8300
+
+spring:
+  application:
+    name: hidden-service
+  thymeleaf:
+    cache: false
+  data:
+    web:
+      pageable:
+        default-page-size: 20 # Default page size.
+        max-page-size: 2000 # Maximum page size to be accepted.
+        one-indexed-parameters: false # Whether to expose and assume 1-based page number indexes.
+        page-parameter: page # Page index parameter name.
+        #prefix: # General prefix to be prepended to the page number and page size parameters.
+        # qualifier-delimiter: _ # Delimiter to be used between the qualifier and the actual page number and size properties.
+        size-parameter: size # Page size parameter name.
+      sort.sort-parameter: sort # Sort parameter name.
+
+  #drop n create table again, good for testing, comment this in production
+  jpa:
+    hibernate:
+      ddl-auto: update
+      show-sql: false
+    properties.hibernate.dialect : org.hibernate.dialect.H2Dialect
+  
+  # default connection pool
+  datasource:
+    initialization-mode: always
+    hikari:
+      connectionTimeout: 20000
+      maximumPoolSize: 5
+
+    url: jdbc:h2:mem:testdb
+    driverClassName: org.h2.Driver
+    username: user
+    password: password

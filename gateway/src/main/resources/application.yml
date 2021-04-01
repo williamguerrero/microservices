@@ -1,2 +1,12 @@
 server:
     port: 9999
+
+spring:
+  cloud:
+    gateway:
+      routes:
+      - id: basic
+        uri: 'http://localhost:8200'
+        predicates:
+          - Path=/location/**
+          - Query=src,mobile
