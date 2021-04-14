@@ -1,25 +1,12 @@
-package com.microservice.location.entity;
+package com.microservice.book.bean;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
-
-@Entity
-public class Location {
-	
-	@Id @GeneratedValue(strategy=GenerationType.AUTO)
-	@Column(nullable = false)
+public class LocationBean {
 	Long id;
 	
-	@Column(nullable = false)
 	String placeName;
 	
-	@Column(nullable = false)
 	Float latitude;
 	
-	@Column(nullable = false)
 	Float longitude;
 
 	public Long getId() {
@@ -53,5 +40,4 @@ public class Location {
 	public void setLongitude(Float longitude) {
 		this.longitude = longitude;
 	}
-	
 }

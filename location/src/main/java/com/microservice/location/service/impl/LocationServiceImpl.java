@@ -34,5 +34,11 @@ public class LocationServiceImpl implements LocationService{
 		return mapper.convertValue(saved, LocationBean.class);
 	}
 
+	@Override
+	public LocationBean getLocationByName(String placeName) {
+		Location location = locationRepository.getByPlaceName(placeName);
+		return mapper.convertValue(location, LocationBean.class);
+	}
+
 	
 }

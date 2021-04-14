@@ -11,4 +11,6 @@ public interface LocationService {
 
 	public LocationBean save(LocationBean bean);
 	
+	public LocationBean getLocationByName(String placeName);
+	
 }
